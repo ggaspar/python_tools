@@ -20,3 +20,9 @@ def get_percentage(base, total, rounding=0):
             round(float(base or 0) * 100 / float(total), rounding)
     percentage = int(percentage) if rounding is 0 else percentage
     return percentage
+
+def smart_cast(int_str,default_value=0):
+    try:
+        return int(int_str)
+    except:
+        return default_value
